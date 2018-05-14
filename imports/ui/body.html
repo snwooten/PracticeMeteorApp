@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+    <header>
+      <h1> My Plant App </h1>
+
+      <form class="new-plant">
+        <input type="text" name="name" placeholder="Type to add name of new plant" />
+        <input type="text" name="type" placeholder="Type to add type of new plant" />
+        <input type="submit" style="display: none;"/>
+      </form>
+    </header>
+
+    <ul>
+      {{#each plants}}
+      {{> plant}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="plant">
+  <li>
+  <button class="remove-plant">x</button>
+  <span>{{name}} the {{type}}</span>
+</li>
+</template>
